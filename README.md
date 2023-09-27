@@ -1,7 +1,6 @@
-# MVP - Aplicação para Gerenciamento de Matérias
+# MVP - Aplicação para Obtenção de News
 
-Este é um projeto Python que usa Flask e PostgreSQL para criar uma API para gerenciar matérias. A API permite criar, atualizar, remover e listar matérias. Além disso, a API inclui documentação interativa gerada pelo Swagger.
-A aplicação usa o módulo psycopg2 para se comunicar com o banco de dados.
+Essa aplicação é utilizada para localizar artigos e manchetes de notícias de atuais
 
 ## Pré-requisitos
 
