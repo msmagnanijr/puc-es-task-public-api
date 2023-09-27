@@ -1,6 +1,6 @@
 # MVP - Aplicação para Obtenção de News
 
-Essa aplicação é utilizada para localizar artigos e manchetes de notícias de atuais
+Essa aplicação é utilizada para localizar artigos e manchetes de notícias atuais
 
 ## Pré-requisitos
 
