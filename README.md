@@ -1,54 +1,40 @@
-# Flask News API
+# MVP - Aplicação para Gerenciamento de Matérias
 
-This is a simple Flask application that functions as a news API using the NewsAPI service. It allows you to retrieve news articles based on a provided keyword.
+Este é um projeto Python que usa Flask e PostgreSQL para criar uma API para gerenciar matérias. A API permite criar, atualizar, remover e listar matérias. Além disso, a API inclui documentação interativa gerada pelo Swagger.
+A aplicação usa o módulo psycopg2 para se comunicar com o banco de dados.
 
-## Getting Started
+## Pré-requisitos
 
-Follow these instructions to get the project up and running on your local machine.
+Para executar este projeto, você precisa ter o Python 3.8 ou superior instalado, além Docker caso seja necessário.
 
-### Prerequisites
+## Como usar
 
-- Python 3.8 or higher
-- Docker (optional, for containerization)
+1. Para instalar as dependências, execute o seguinte comando:
 
-### Installation
+```
+pip install -r requirements.txt
+```
 
-Clone the repository to your local machine:
+2. Inicie a aplicação:
 
-
-   git clone https://github.com/msmagnanijr/puc-es-task-public-api.git
-   cd puc-es-task-public-api
-
-
-### Install Python dependencies:
-
-    pip install -r requirements.txt
-
-### Usage
-
-Set your NewsAPI key:
-
-Get your NewsAPI key by signing up at NewsAPI and replace 'YOUR_NEWS_API_KEY' in app.py with your actual key:
-
-
-    NEWS_API_KEY = 'YOUR_NEWS_API_KEY'
-
-### Run the Flask application:
-
+```
 python app.py
+```
 
-The application will start and be accessible at http://localhost:6000.
+Acesse a aplicação em seu navegador no endereço http://localhost:6000
 
+3. Rotas:
 
 API Endpoint
 GET /get_news
 
-Retrieves news articles based on a provided keyword.
+Recupera artigos de "news" com base em uma palavra fornecida.
 
-Example Request:
+Request:
+
 http://localhost:6000/get_news?keyword=technology
 
-Example Response:
+Response:
 
 {
     "news_titles": [
@@ -58,15 +44,8 @@ Example Response:
     ]
 }
 
-### Docker (Optional)
+É possível também utilizar o Docker já que a aplicação foi dockerizada. Para isso será necessário construir e depois executar:
 
-If you prefer to run the application in a Docker container, follow these instructions:
+ docker build -t  task-public-api .
+ docker run -p 6000:6000 task-public-api `
 
-Build the Docker image:
-
-docker build -t flask-news-api .
-
-
-Run the Docker container:
-
-docker run -d -p 6000:6000 flask-news-api
